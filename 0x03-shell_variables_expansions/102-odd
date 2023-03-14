@@ -1,3 +1,2 @@
 #!/bin/bash
 paste -d'\n' - - | cut -d$'\n' -f1
-
