@@ -1,2 +1,2 @@
-#!/bin/bash
-echo $(echo "ibase=water; $WATER" | bc) + $(echo "ibase=stir; $STIR" | bc) | bc | tr -d '\\\n' | xxd -r -p | awk '{print toupper($0)}' 
+#!/bin/bash 
+echo $(echo "$WATER" | tr 'water' '01234') + $(echo "$STIR" | tr 'stir.' '34567') | bc | tr '0123456789ABC' 'gtaio luSnemf'
