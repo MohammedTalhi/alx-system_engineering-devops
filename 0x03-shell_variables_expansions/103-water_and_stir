@@ -1,3 +1,2 @@
 #!/bin/bash
-bestchol=$(echo "$WATER" | tr 'water' '01234')$(echo "$STIR" | tr 'stir' '5678') | bc
-echo $(echo "$bestchol" | tr '0123456789ABC' 'wateristir....') 
+echo $(echo "ibase=water; $WATER" | bc) + $(echo "ibase=stir; $STIR" | bc) | bc | tr -d '\\\n' | xxd -r -p | awk '{print toupper($0)}' 
